@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The College Hustler</title>
+  <link rel="icon" href="favi.svg" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #000;
+      --accent: #ffde59;
+      --text: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--primary);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1000;
+      padding: 16px 0;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 72px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .logo:hover {
+      transform: scale(1.02);
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      padding: 16px 24px;
+    }
+
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      font-weight: 600;
+      border-bottom: 1px solid #333;
+    }
+
+    .mobile-menu.show {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        height: 64px;
+      }
+    }
+
+    header.hero {
+      height: 100vh;
+      background-color: var(--accent);
+      background-image:
+        radial-gradient(#ffe87a 1px, transparent 1px),
+        radial-gradient(#ffe87a 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #000;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background: #000;
+      color: var(--accent);
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #222;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .card-box {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.05);
+    }
+
+    .testimonial {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      font-style: italic;
+    }
+
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .optin-section {
+      width: 100%;
+      background: linear-gradient(145deg, #111, #000);
+      padding: 80px 20px;
+    }
+
+    .optin-box {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+      text-align: center;
+    }
+
+    .optin-box input {
+      padding: 16px 20px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background: #000;
+      color: var(--text);
+      font-size: 1rem;
+      margin-top: 24px;
+      margin-bottom: 20px;
+    }
+
+    .optin-box button {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 16px 28px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    footer {
+      background: #1a1a1a;
+      padding: 40px 20px;
+      text-align: center;
+      color: #999;
+      width: 100%;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .logo-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="sticky-header">
+    <div class="nav-container">
+      <div class="logo-wrapper">
+        <img src="logo.svg" alt="The College Hustler Logo" class="logo" />
+        <span class="logo-text">The College Hustler</span>
+      </div>
+      <nav class="main-nav">
+        <a href="https://www.linkedin.com/in/moseskatala/" target="_blank" rel="noopener noreferrer">Connect with the Author</a>
+        <a href="#bonus">Bonuses</a>
+        <a href="#optin"> Get Your Copy</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="https://www.linkedin.com/in/moseskatala/" onclick="toggleMenu()"> Connect with the Author </a>
+      <a href="#bonus" onclick="toggleMenu()">Bonuses</a>
+      <a href="#optin" onclick="toggleMenu()"> Get Your Copy </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Start Now, So You’re Not Jobless Later.</h1>
+      <p> Over 30% of graduates enter the workforce unemployed.
+        The College Hustler is the book that empowers you to build your own success before graduation day, so you are not part of this statistic</p>
+      <button class="cta-button" onclick="document.getElementById('optin').scrollIntoView({ behavior: 'smooth' })"> Grab Your Copy </button>
+    </div>
+  </header>
+
+<!-- Letter to the Hustlers -->
+<section id="letter" style="background: #0d0d0d; padding: 80px 20px; border-top: 1px solid #222;">
+    <div style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.9; color: #eaeaea; padding-bottom: 20px;">
+  
+      <p style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 1.2em;">Updated — 26th June, 2025</p>
+  
+      <p style="margin-bottom: 1.2em;">Dear College Student,</p>
+  
+      <p style="margin-bottom: 1.2em;">Here’s the truth, a degree no longer guarantees a job. In fact, more than half of recent graduates remain unemployed for months. Some, even years.</p>
+  
+      <p style="margin-bottom: 1.2em;">They follow the path they were told to follow, study hard, pass exams, graduate , only to realize no one is lining up to hire them. No offers. No income. Just pressure, regret, and a slow-growing fear that they’ve wasted time.</p>
+  
+      <p style="margin-bottom: 1.2em;">This isn’t rare. It’s the norm. And if you’re a college student right now, you’re not only at risk of it, you’re next in line.</p>
+  
+      <p style="margin-bottom: 1.2em;">I’m not saying this to scare you. I’m saying it because you need to wake up. Because I’ve been there. And I refused to be a statistic.</p>
+  
+      <p style="margin-bottom: 1.2em;">While my classmates were polishing CVs and waiting for opportunities, I was hustling. Before I graduated, I’d already touched over $350,000. This money did not come from luck or from a position of privilege, but from building something real while still in school.</p>
+  
+      <p style="margin-bottom: 1.2em;">This book, <strong>The College Hustler</strong>, is both my story and the blueprint I used. It tells the exact path I followed. It’s not motivational fluff. It’s strategy. Actionable, gritty, tested in the trenches of student life.</p>
+  
+      <p style="margin-bottom: 1.2em;">Inside, I show you how to:</p>
+      <ul style="margin: 20px 0 30px 20px; line-height: 1.8;">
+        <li>💡 Discover your purpose and passion even if you feel lost right now</li> <br>
+        <li>💸 Start your hustle even if you have no capital or connections</li> <br>
+        <li>📱 Get profitable business ideas even if you have never done business before </li> <br>
+        <li>🧠 Build a mindset and money habits that keep you focused, grounded, and free</li> <br>
+      </ul>
+  
+      <p style="margin-bottom: 1.2em;">If you want to avoid becoming another unemployed graduate, you need to do something different - now. Not after exams. Not after graduation. Now.</p>
+  
+      <p style="margin-bottom: 1.2em;">This book was written for students like you, by someone who’s walked the same halls, faced the same fears, and figured out a better way. And now I want to show you exactly how I did it, so you can too.</p>
+  
+      <p style="margin-top: 40px; margin-bottom: 1.2em;"><strong>The College Hustler</strong> is your chance to change your future before it arrives. Don’t waste it.</p>
+  
+      <p style="margin-bottom: 1.2em;">Your degree may open doors. But this book will show you how to build your own.</p>
+  
+      <p><strong>Moses Katala</strong><br />Author of The College Hustler! </p>
+  
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="#optin" 
+           style="display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--primary); padding: 16px 36px; border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: background 0.3s ease;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px;">
+          Get Your Copy Now
+        </a>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
+<!-- What You'll Learn Section -->
+<section id="about">
+    <h2>Some of What You’ll Learn Inside</h2>
+  
+    <div class="card-box">
+      <p>🎯 The unique approach that led me to discover my passion and how you can use the same method to find yours with clarity and confidence.</p>
+    </div>
+  
+    <div class="card-box">
+      <p>🧭 How I ended up in the world of business, when all I ever wanted was to do politics. The pivot, the resistance, and how I found purpose where I least expected.</p>
+    </div>
+  
+    <div class="card-box">
+      <p>💸 How I got my first investment money. You'll see exactly how you can fund your hustle too.</p>
+    </div>
+  
+    <div class="card-box">
+      <p>💰 The blunders I made, so you dont have to repeat them. I want you to learn from my mistakes too. </p>
+    </div>
+  
+    <div class="card-box">
+      <p>📱 How I got the number of the daughter of the then richest man in the world — yes, <strong>Bill Gates</strong>. And how it all went down.</p>
+    </div>
+  </section>
+  
+
+<!-- Bonuses Section -->
+<section id="bonus">
+    <h2>Early Readers Get Access To </h2>
+  
+    <div class="card-box">
+      <p>💼 The exact pitch that brought in <strong>$50,000</strong> — 12 months before I graduated. Real words. Real results.</p>
+    </div>
+  
+    <div class="card-box">
+      <p>📝 The pitch that landed me <strong>$51,000</strong> — just 9 months before graduation. Copy it. Tweak it. Use it to raise your own capital.</p>
+    </div>
+  
+    <div class="card-box">
+      <p>📄 The proposal that closed a <strong>$40,000 client</strong> — 1.5 years before graduation day. Proof that student hustlers can win big with the right script.</p>
+    </div>
+  
+    <p style="text-align:center; margin-top: 32px;">
+      <em>⚠️ These bonuses are only available for a limited time. Don’t miss your window.</em>
+    </p>
+  </section>
+  
+
+<!-- WhatsApp CTA Section -->
+<section id="optin" style="width: 100%; background: linear-gradient(145deg, #111, #000); padding: 80px 20px;">
+    <div class="optin-box" style="max-width: 600px; margin: 0 auto; background: #1a1a1a; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1); text-align: center;">
+      
+      <h2 style="color: var(--accent); font-size: 2rem; margin-bottom: 20px;">Order Now on WhatsApp</h2>
+  
+      <p style="font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">
+        Tap the button below  link to order Your Copy of The College hustler or request a free chapter for preview. 
+      </p>
+  
+      <a href="https://wa.me/255760779020?text=Hello%20there%2C%20I%20would%20love%20to%20order%20my%20copy%20of%20The%20College%20Hustler." 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--primary); padding: 16px 28px; border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: background 0.3s ease;"
+         onclick="console.log('WhatsApp CTA clicked');">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px;">
+        Order Now on WhatsApp
+      </a>
+  
+    </div>
+  </section>
+  
+  
+  
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 — The College Hustler. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
