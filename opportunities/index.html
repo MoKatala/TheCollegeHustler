@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Opportunities — The College Hustler</title>
+
+<!-- SEO -->
+<meta name="description" content="Grants, competitions, fellowships, accelerators and internships curated for African college founders. Updated regularly by The College Hustler."/>
+<meta name="author" content="The College Hustler"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://thecollegehustler.com/opportunities"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://thecollegehustler.com/opportunities"/>
+<meta property="og:title" content="Opportunities for African College Founders — The College Hustler"/>
+<meta property="og:description" content="Grants, competitions, fellowships and accelerators curated for African college founders."/>
+<meta property="og:site_name" content="The College Hustler"/>
+<link rel="icon" type="image/svg+xml" href="logo.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet"/>
+
+<style>
+:root {
+  --black: #0f0f0f;
+  --off: #161514;
+  --surface: #1d1c1a;
+  --surface-2: #24221e;
+  --border: rgba(255,255,255,0.07);
+  --white: #f5f2ee;
+  --cream: #ede9e3;
+  --gold: #f5c518;
+  --gold-dim: #c9a514;
+  --text: #d8d4ce;
+  --muted: #a39d95;
+  --radius: 8px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body.menu-open {
+  overflow: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* Nav */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 48px;
+  transition: background 0.4s, border-bottom 0.4s;
+}
+.nav.scrolled {
+  background: rgba(15,15,15,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav.menu-open {
+  background: rgba(15,15,15,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.nav-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  line-height: 1.1;
+}
+.nav-logo-text span { color: var(--gold); }
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.nav-toggle:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+}
+.nav-toggle-lines {
+  position: relative;
+  width: 18px;
+  height: 12px;
+}
+.nav-toggle-lines span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 0.25s var(--ease), opacity 0.25s var(--ease), top 0.25s var(--ease);
+}
+.nav-toggle-lines span:nth-child(1) { top: 0; }
+.nav-toggle-lines span:nth-child(2) { top: 5px; }
+.nav-toggle-lines span:nth-child(3) { top: 10px; }
+.nav.menu-open .nav-toggle-lines span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+.nav.menu-open .nav-toggle-lines span:nth-child(2) {
+  opacity: 0;
+}
+.nav.menu-open .nav-toggle-lines span:nth-child(3) {
+  top: 5px;
+  transform: rotate(-45deg);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.04);
+}
+.nav-links a.main-site {
+  color: var(--black);
+  background: var(--gold);
+  font-weight: 700;
+}
+.nav-links a.main-site:hover {
+  color: var(--black);
+  background: #ffd642;
+}
+.nav-links a.section-link {
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 128px 48px 56px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 80% 18%, rgba(245,197,24,0.1), transparent 26%),
+    radial-gradient(circle at 12% 12%, rgba(255,255,255,0.04), transparent 22%),
+    linear-gradient(180deg, #111110 0%, #0f0f0f 100%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.38), transparent 80%);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: block;
+}
+.hero-copy {
+  max-width: 720px;
+  padding-left: 28px;
+}
+.hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: clamp(42px, 5.5vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 540px;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s, background 0.2s, border-color 0.2s;
+}
+.hero-btn:hover { transform: translateY(-1px); }
+.hero-btn-primary {
+  background: var(--gold);
+  color: var(--black);
+}
+.hero-btn-secondary {
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  color: var(--white);
+}
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.hero-meta-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: blink 2.5s ease infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Search */
+.search-wrap {
+  padding: 24px 48px;
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+.search-inner {
+  max-width: 600px;
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 12px 20px 12px 44px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input::placeholder { color: var(--muted); }
+.search-input:focus { border-color: rgba(245,197,24,0.35); }
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+/* Filter */
+.filter-bar {
+  background: var(--off);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky;
+  top: 76px;
+  z-index: 80;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.filter-bar::-webkit-scrollbar { display: none; }
+.filter-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 16px 20px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+  letter-spacing: 0.01em;
+}
+.filter-btn:hover { color: var(--white); }
+.filter-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+.filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245,197,24,0.12);
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 100px;
+  margin-left: 6px;
+}
+
+/* Main layout */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 48px 80px;
+  align-items: start;
+}
+.opps-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.opps-count {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.opps-count strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.opps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+
+/* Cards */
+.opp-card {
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: start;
+  transition: border-color 0.25s, transform 0.25s, background 0.25s;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.opp-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.opp-card:hover {
+  border-color: rgba(245,197,24,0.25);
+  background: #1a1916;
+  transform: translateX(3px);
+}
+.opp-card:hover::before { opacity: 1; }
+.opp-card.featured {
+  background: rgba(245,197,24,0.04);
+  border-color: rgba(245,197,24,0.2);
+}
+.opp-card.featured::before { opacity: 1; }
+.opp-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.opp-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid;
+}
+.tag-grant { color: #4ade80; border-color: rgba(74,222,128,0.25); background: rgba(74,222,128,0.08); }
+.tag-fellowship { color: #818cf8; border-color: rgba(129,140,248,0.25); background: rgba(129,140,248,0.08); }
+.tag-competition { color: #fb923c; border-color: rgba(251,146,60,0.25); background: rgba(251,146,60,0.08); }
+.tag-accelerator { color: var(--gold); border-color: rgba(245,197,24,0.25); background: rgba(245,197,24,0.08); }
+.tag-internship { color: #38bdf8; border-color: rgba(56,189,248,0.25); background: rgba(56,189,248,0.08); }
+.tag-scholarship { color: #f472b6; border-color: rgba(244,114,182,0.25); background: rgba(244,114,182,0.08); }
+.tag-featured { color: var(--gold); border-color: rgba(245,197,24,0.35); background: rgba(245,197,24,0.12); }
+.opp-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.opp-org {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.opp-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.opp-footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.opp-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.opp-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.opp-deadline {
+  text-align: right;
+}
+.opp-deadline-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 2px;
+}
+.opp-deadline-date {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.opp-deadline-date.urgent { color: #fb923c; }
+.opp-deadline-date.open { color: #4ade80; }
+.opp-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.opp-card:hover .opp-arrow {
+  background: rgba(245,197,24,0.12);
+  border-color: rgba(245,197,24,0.3);
+  color: var(--gold);
+}
+.no-results {
+  text-align: center;
+  padding: 80px 20px;
+  display: none;
+}
+.no-results-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+.no-results h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.no-results p {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 138px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
+  border-left: 1px solid var(--border);
+}
+.sidebar-card {
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+}
+.sidebar-card-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.sidebar-card-sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.newsletter-input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 10px;
+}
+.newsletter-input::placeholder { color: var(--muted); }
+.newsletter-input:focus { border-color: rgba(245,197,24,0.4); }
+.newsletter-btn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--black);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 11px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  letter-spacing: 0.01em;
+}
+.newsletter-btn:hover { opacity: 0.88; }
+.cat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.cat-item:last-child { border-bottom: none; }
+.cat-item:hover { color: var(--white); }
+.cat-item-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cat-num {
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--gold);
+}
+.share-cta {
+  background: linear-gradient(135deg, rgba(245,197,24,0.08), rgba(245,197,24,0.04));
+  border: 1px solid rgba(245,197,24,0.2);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+}
+.share-cta-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.share-cta-title {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.share-cta-body {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.share-cta-btn {
+  display: block;
+  background: var(--gold);
+  color: var(--black);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: opacity 0.2s;
+  letter-spacing: 0.01em;
+}
+.share-cta-btn:hover { opacity: 0.88; }
+
+/* Submit */
+.submit-section {
+  background: var(--off);
+  border-top: 1px solid var(--border);
+  padding: 72px 48px;
+}
+.submit-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.submit-left .eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+.submit-left h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: clamp(28px, 3.5vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.submit-left h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.submit-left p {
+  font-size: 0.97rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.submit-left p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.submit-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+.submit-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+.submit-benefit-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(245,197,24,0.1);
+  border: 1px solid rgba(245,197,24,0.2);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.submit-right {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+}
+.submit-right h3 {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.submit-right p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.submit-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.submit-type {
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.78rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.submit-type-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.submit-form-btn {
+  display: block;
+  width: 100%;
+  background: var(--gold);
+  color: var(--black);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 15px;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.01em;
+}
+.submit-form-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+.submit-form-note {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  border-top: 1px solid var(--border);
+  padding: 40px 48px 28px;
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo-text {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+.footer-logo-text span { color: var(--gold); }
+.footer-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  font-size: 0.82rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--text); }
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-bottom span {
+  font-size: 0.75rem;
+  color: #6f695f;
+}
+
+/* Motion */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: fadeUp 0.6s var(--ease) both; }
+.hero h1 { animation: fadeUp 0.6s 0.1s var(--ease) both; }
+.hero-sub { animation: fadeUp 0.6s 0.2s var(--ease) both; }
+.hero-actions { animation: fadeUp 0.6s 0.3s var(--ease) both; }
+.hero-meta { animation: fadeUp 0.6s 0.4s var(--ease) both; }
+
+/* Responsive */
+@media (max-width: 1140px) {
+  .hero-copy {
+    max-width: none;
+    padding-left: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .nav { padding: 14px 28px; }
+  .hero { padding: 124px 28px 48px; }
+  .search-wrap { padding: 20px 28px; }
+  .filter-bar { padding: 0 28px; }
+  .main { padding: 36px 28px 60px; gap: 0; }
+  .sidebar { padding-left: 28px; }
+  .submit-section { padding: 56px 28px; }
+  footer { padding: 36px 28px 24px; }
+}
+@media (max-width: 860px) {
+  .main { grid-template-columns: 1fr; }
+  .sidebar {
+    position: static;
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .submit-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .submit-types { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .nav {
+    min-height: 72px;
+    padding: 12px 20px;
+  }
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(17,17,16,0.98);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.35);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+  }
+  .nav.menu-open .nav-links {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-links li,
+  .nav-links a {
+    width: 100%;
+  }
+  .nav-links a {
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    text-align: left;
+  }
+  .filter-bar {
+    top: 72px;
+  }
+}
+@media (max-width: 600px) {
+  .hero { padding: 116px 20px 36px; }
+  .hero h1 { font-size: clamp(32px, 8vw, 48px); }
+  .hero-sub {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+  .hero-actions {
+    gap: 10px;
+  }
+  .hero-btn {
+    width: 100%;
+  }
+  .hero-copy {
+    padding-left: 0;
+  }
+  .search-wrap,
+  .filter-bar,
+  .main,
+  .submit-section,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .filter-btn {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .sidebar { grid-template-columns: 1fr; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .opp-card {
+    grid-template-columns: 1fr;
+  }
+  .opp-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .opp-deadline {
+    text-align: left;
+  }
+  .submit-right {
+    padding: 28px 20px;
+  }
+}
+@media (max-width: 420px) {
+  .nav-logo-text {
+    font-size: 0.92rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-meta {
+    gap: 12px;
+  }
+  .opp-card {
+    padding: 22px 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <a href="https://www.thecollegehustler.com" class="nav-logo" target="_blank" rel="noopener noreferrer">
+    <div class="nav-logo-mark">
+      <img src="logo.svg" alt="The College Hustler" style="height:36px;width:auto;object-fit:contain;display:block;"/>
+    </div>
+    <div class="nav-logo-text"> Verified <span> Opportunities</span></div>
+  </a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+    <span class="nav-toggle-lines" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="https://www.collegehustler.com" class="main-site" target="_blank" rel="noopener noreferrer">Home</a></li>
+    <li><a href="#browse" class="section-link">Browse Opportunities</a></li>
+    <li><a href="#submit" class="section-link">Submit Opportunity</a></li>
+    <li><a href="#updates" class="section-link">Stay Updated</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Curated for African College Founders</div>
+      <h1>Your next big break<br/>is <em>already out there.</em></h1>
+      <p class="hero-sub">
+        Too many founders miss life-changing grants, fellowships, competitions, and internships because the information is scattered. This platform turns that chaos into one clear, trusted pipeline.
+      </p>
+      <div class="hero-actions">
+        <a href="#browse" class="hero-btn hero-btn-primary">Explore Opportunities</a>
+        <a href="#submit" class="hero-btn hero-btn-secondary">Submit an Opportunity</a>
+      </div>
+      <div class="hero-meta">
+        <span class="hero-meta-item"><span class="hero-meta-dot"></span> Updated regularly</span>
+        <span class="hero-meta-item">🌍 Pan-African focus</span>
+        <span class="hero-meta-item">🎓 For college students &amp; recent grads</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="search-wrap" id="browse">
+  <div class="search-inner">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" type="text" id="searchInput" placeholder="Search opportunities"/>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All <span class="filter-count" id="count-all">18</span></button>
+  <button class="filter-btn" data-filter="grant">Grants <span class="filter-count" id="count-grant"></span></button>
+  <button class="filter-btn" data-filter="fellowship">Fellowships <span class="filter-count" id="count-fellowship"></span></button>
+  <button class="filter-btn" data-filter="competition">Competitions <span class="filter-count" id="count-competition"></span></button>
+  <button class="filter-btn" data-filter="accelerator">Accelerators <span class="filter-count" id="count-accelerator"></span></button>
+  <button class="filter-btn" data-filter="internship">Internships <span class="filter-count" id="count-internship"></span></button>
+  <button class="filter-btn" data-filter="scholarship">Scholarships <span class="filter-count" id="count-scholarship"></span></button>
+</div>
+
+<div class="main">
+  <div>
+    <div class="opps-header">
+      <p class="opps-count"><strong id="visible-count">18</strong> opportunities found</p>
+    </div>
+    <div class="opps-grid" id="oppsGrid"></div>
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔭</div>
+      <h3>No opportunities found</h3>
+      <p>Try a different search term or filter. New opportunities are added regularly.</p>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="share-cta">
+      <div class="share-cta-icon">📢</div>
+      <div class="share-cta-title">Got an opportunity to share?</div>
+      <p class="share-cta-body">Help fellow African founders. Submit your grant, competition, or program and we'll list it here.</p>
+      <a href="#submit" class="share-cta-btn">Submit an Opportunity →</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Browse by Type</div>
+      <p class="sidebar-card-sub">Click any category to filter</p>
+      <div class="cat-list" id="catList">
+        <div class="cat-item" data-filter="grant"><span class="cat-item-label"><span class="cat-dot" style="background:#4ade80"></span>Grants</span><span class="cat-num" id="s-grant">0</span></div>
+        <div class="cat-item" data-filter="fellowship"><span class="cat-item-label"><span class="cat-dot" style="background:#818cf8"></span>Fellowships</span><span class="cat-num" id="s-fellowship">0</span></div>
+        <div class="cat-item" data-filter="competition"><span class="cat-item-label"><span class="cat-dot" style="background:#fb923c"></span>Competitions</span><span class="cat-num" id="s-competition">0</span></div>
+        <div class="cat-item" data-filter="accelerator"><span class="cat-item-label"><span class="cat-dot" style="background:#f5c518"></span>Accelerators</span><span class="cat-num" id="s-accelerator">0</span></div>
+        <div class="cat-item" data-filter="internship"><span class="cat-item-label"><span class="cat-dot" style="background:#38bdf8"></span>Internships</span><span class="cat-num" id="s-internship">0</span></div>
+        <div class="cat-item" data-filter="scholarship"><span class="cat-item-label"><span class="cat-dot" style="background:#f472b6"></span>Scholarships</span><span class="cat-num" id="s-scholarship">0</span></div>
+      </div>
+    </div>
+
+    <div class="sidebar-card" id="updates">
+      <div class="sidebar-card-title">Stay Updated</div>
+      <p class="sidebar-card-sub">Get new opportunities delivered to your WhatsApp or email as soon as they go live.</p>
+      <input class="newsletter-input" type="email" placeholder="Your email address"/>
+      <button class="newsletter-btn">Notify Me →</button>
+    </div>
+  </div>
+</div>
+
+<section class="submit-section" id="submit">
+  <div class="submit-inner">
+    <div class="submit-left">
+      <span class="eyebrow">For Organisations</span>
+      <h2>Reach Africa's most<br/><em>ambitious founders.</em></h2>
+      <p>If your organisation has a grant, fellowship, competition, accelerator program, or internship opportunity, we want to help you reach the right people.</p>
+      <p>The College Hustler community is made up of <strong>driven, entrepreneurially-minded college students</strong> across Africa who are actively looking for exactly what you're offering.</p>
+      <p>Listing is free. We just ask that the opportunity is genuine, accessible to African students, and adds real value.</p>
+
+      <div class="submit-benefits">
+        <div class="submit-benefit">
+          <div class="submit-benefit-icon">🎯</div>
+          <span>Direct reach to motivated student founders across Africa</span>
+        </div>
+        <div class="submit-benefit">
+          <div class="submit-benefit-icon">⚡</div>
+          <span>Listed within 48 hours of submission</span>
+        </div>
+        <div class="submit-benefit">
+          <div class="submit-benefit-icon">🔁</div>
+          <span>Shared across our community channels and networks</span>
+        </div>
+        <div class="submit-benefit">
+          <div class="submit-benefit-icon">💛</div>
+          <span>100% free to list, no fees and no catch</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-right">
+      <h3>Submit Your Opportunity</h3>
+      <p>Tell us about your program and we'll review and publish it within 48 hours. We accept the following types:</p>
+      <div class="submit-types">
+        <div class="submit-type"><span class="submit-type-dot"></span>Grants &amp; Funding</div>
+        <div class="submit-type"><span class="submit-type-dot"></span>Fellowships</div>
+        <div class="submit-type"><span class="submit-type-dot"></span>Competitions</div>
+        <div class="submit-type"><span class="submit-type-dot"></span>Accelerators</div>
+        <div class="submit-type"><span class="submit-type-dot"></span>Internships</div>
+        <div class="submit-type"><span class="submit-type-dot"></span>Scholarships</div>
+      </div>
+      <a href="mailto:moses@thecollegehustler.com?subject=Opportunity%20Submission" class="submit-form-btn">Email to Submit →</a>
+      <p class="submit-form-note">Questions? Email us at moses@thecollegehustler.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo.svg" alt="The College Hustler" style="height:32px;width:auto;object-fit:contain;"/>
+      <div class="footer-logo-text">The College <span>Hustler</span></div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://www.collegehustler.com" target="_blank" rel="noopener noreferrer">Home</a></li>
+      <li><a href="#browse">Browse</a></li>
+      <li><a href="#submit">Submit</a></li>
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="mailto:moses@thecollegehustler.com">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The College Hustler. All rights reserved.</span>
+    <span>Developing Tomorrow's Entrepreneurs Today.</span>
+  </div>
+</footer>
+
+<script>
+const opportunities = [
+  {
+    id: 1,
+    title: "Tony Elumelu Foundation Entrepreneurship Programme",
+    org: "Tony Elumelu Foundation",
+    type: "grant",
+    desc: "One of Africa's largest entrepreneurship programmes offering $5,000 seed capital, mentorship, and training to African entrepreneurs. Open to early-stage businesses across all 54 African countries.",
+    deadline: "March 2026",
+    deadlineStatus: "open",
+    location: "Pan-Africa",
+    value: "$5,000 seed capital",
+    url: "https://www.tonyelumelufoundation.org",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Anzisha Prize",
+    org: "African Leadership Academy",
+    type: "competition",
+    desc: "Africa's premier award for very young entrepreneurs aged 15–22. Winners receive up to $25,000 and join a powerful network of Africa's youngest entrepreneurs.",
+    deadline: "July 2025",
+    deadlineStatus: "open",
+    location: "Pan-Africa",
+    value: "Up to $25,000",
+    url: "https://www.anzishaprize.org",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Mastercard Foundation Scholars Program",
+    org: "Mastercard Foundation",
+    type: "scholarship",
+    desc: "Comprehensive scholarships for talented yet economically disadvantaged young Africans to study at leading universities globally, with a focus on giving back to Africa.",
+    deadline: "Varies by partner university",
+    deadlineStatus: "open",
+    location: "Pan-Africa",
+    value: "Full scholarship",
+    url: "https://mastercardfdn.org/all/scholars",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "Africa's Business Heroes",
+    org: "Jack Ma Foundation / Alibaba",
+    type: "competition",
+    desc: "A pan-African competition celebrating African entrepreneurs. Top 10 finalists share a $1.5M prize pool and gain access to mentorship from global business leaders.",
+    deadline: "August 2025",
+    deadlineStatus: "open",
+    location: "Pan-Africa",
+    value: "$1.5M prize pool",
+    url: "https://africabusinessheroes.org",
+    featured: true
+  },
+  {
+    id: 5,
+    title: "Mandela Washington Fellowship",
+    org: "U.S. Department of State / YALI",
+    type: "fellowship",
+    desc: "The flagship program of the Young African Leaders Initiative (YALI). Young African leaders participate in a six-week leadership institute at a U.S. university, followed by networking events.",
+    deadline: "November 2025",
+    deadlineStatus: "open",
+    location: "Pan-Africa (18–35 years)",
+    value: "Fully funded",
+    url: "https://yali.state.gov/mwf",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Seedstars Africa Summit",
+    org: "Seedstars World",
+    type: "competition",
+    desc: "Seedstars identifies the best early-stage startups across Africa. Winners gain investment, mentorship, and the opportunity to compete at the global Seedstars Summit in Switzerland.",
+    deadline: "Rolling — check website",
+    deadlineStatus: "open",
+    location: "Multiple African countries",
+    value: "Up to $500K investment",
+    url: "https://www.seedstars.com",
+    featured: false
+  },
+  {
+    id: 7,
+    title: "African Development Bank — Coding for Employment",
+    org: "African Development Bank (AfDB)",
+    type: "internship",
+    desc: "Internship and skills development programs for young Africans in technology and innovation. Gain practical skills and access to the AfDB's continent-wide network.",
+    deadline: "Rolling intake",
+    deadlineStatus: "open",
+    location: "Pan-Africa",
+    value: "Paid internship",
+    url: "https://www.afdb.org",
+    featured: false
+  },
+  {
+    id: 8,
+    title: "African Union Youth Volunteer Corps",
+    org: "African Union Commission",
+    type: "fellowship",
+    desc: "A platform for young Africans to contribute their skills and expertise to AU organs, RECs, and member states while gaining professional experience and a continental network.",
+    deadline: "December 2025",
+    deadlineStatus: "open",
+    location: "Pan-Africa",
+    value: "Monthly stipend + benefits",
+    url: "https://au.int/en/auyvc",
+    featured: false
+  },
+  {
+    id: 9,
+    title: "Google for Startups Africa",
+    org: "Google",
+    type: "accelerator",
+    desc: "Google's accelerator program for seed to Series A tech startups across Africa. Participants receive equity-free support, mentorship from Google experts, and access to the Google network.",
+    deadline: "Check website for next cohort",
+    deadlineStatus: "open",
+    location: "Pan-Africa (tech startups)",
+    value: "Equity-free support",
+    url: "https://startup.google.com/programs/accelerator/africa",
+    featured: true
+  },
+  {
+    id: 10,
+    title: "Hult Prize",
+    org: "Hult Prize Foundation",
+    type: "competition",
+    desc: "The world's largest student competition for social entrepreneurship. Teams from universities globally compete for a $1M prize to launch a social enterprise. African campuses welcome.",
+    deadline: "January 2026",
+    deadlineStatus: "open",
+    location: "University-based, global",
+    value: "$1,000,000 prize",
+    url: "https://www.hultprize.org",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "African Women Innovation and Entrepreneurship Forum Grant",
+    org: "AWIEF",
+    type: "grant",
+    desc: "Supporting women entrepreneurs across Africa with funding, capacity building, and market access. Open to female-led businesses with a clear social or economic impact.",
+    deadline: "Rolling applications",
+    deadlineStatus: "open",
+    location: "Pan-Africa (women entrepreneurs)",
+    value: "Varies by program",
+    url: "https://awieforum.org",
+    featured: false
+  },
+  {
+    id: 12,
+    title: "MasterCard Foundation COVID-19 Recovery Fund",
+    org: "Mastercard Foundation",
+    type: "grant",
+    desc: "Supporting small and growing businesses across Africa to recover and build resilience. Focuses on businesses that create jobs for young people, especially young women.",
+    deadline: "Rolling",
+    deadlineStatus: "open",
+    location: "Sub-Saharan Africa",
+    value: "Up to $100,000",
+    url: "https://mastercardfdn.org",
+    featured: false
+  },
+  {
+    id: 13,
+    title: "MIT Solve Global Challenges",
+    org: "MIT",
+    type: "competition",
+    desc: "MIT Solve identifies and supports tech-based social entrepreneurs solving global challenges. Solver teams receive funding, mentorship, and resources from MIT's ecosystem.",
+    deadline: "February 2026",
+    deadlineStatus: "open",
+    location: "Global — African applicants encouraged",
+    value: "Up to $1.5M in prizes",
+    url: "https://solve.mit.edu",
+    featured: false
+  },
+  {
+    id: 14,
+    title: "IFC SME Ventures — Africa",
+    org: "International Finance Corporation (World Bank Group)",
+    type: "grant",
+    desc: "Funding and capacity support for SMEs in Africa, particularly in fragile and underserved markets. Targets businesses with growth potential and job creation impact.",
+    deadline: "Rolling",
+    deadlineStatus: "open",
+    location: "Sub-Saharan Africa",
+    value: "Varies",
+    url: "https://www.ifc.org",
+    featured: false
+  },
+  {
+    id: 15,
+    title: "Iungo Capital Fellowship",
+    org: "Iungo Capital",
+    type: "fellowship",
+    desc: "A fellowship designed for young African professionals interested in impact investing and venture capital. Fellows work alongside experienced investors and get hands-on deal experience.",
+    deadline: "June 2025",
+    deadlineStatus: "urgent",
+    location: "East Africa",
+    value: "Stipend + training",
+    url: "#",
+    featured: false
+  },
+  {
+    id: 16,
+    title: "GSMA Innovation Fund for Digital Utilities",
+    org: "GSMA",
+    type: "grant",
+    desc: "Funding for mobile-enabled innovations improving access to energy, water, and sanitation across sub-Saharan Africa and South Asia. Open to tech startups and entrepreneurs.",
+    deadline: "September 2025",
+    deadlineStatus: "open",
+    location: "Sub-Saharan Africa",
+    value: "Up to £250,000",
+    url: "https://www.gsma.com",
+    featured: false
+  },
+  {
+    id: 17,
+    title: "African Leadership University Scholarship",
+    org: "African Leadership University (ALU)",
+    type: "scholarship",
+    desc: "Merit and need-based scholarships for students joining ALU's mission-driven programs in Rwanda and Mauritius. ALU trains the next generation of African leaders and entrepreneurs.",
+    deadline: "Rolling admissions",
+    deadlineStatus: "open",
+    location: "Rwanda / Mauritius",
+    value: "Partial to full scholarship",
+    url: "https://www.alueducation.com",
+    featured: false
+  },
+  {
+    id: 18,
+    title: "Y Combinator — Startup School",
+    org: "Y Combinator",
+    type: "accelerator",
+    desc: "A free online program from YC helping early-stage founders build their startups. Includes weekly content, office hours, and a global founder community. No equity required for Startup School.",
+    deadline: "Rolling — always open",
+    deadlineStatus: "open",
+    location: "Global (online)",
+    value: "Free access + community",
+    url: "https://www.startupschool.org",
+    featured: false
+  }
+];
+
+function tagClass(type) {
+  const map = {
+    grant: "tag-grant",
+    fellowship: "tag-fellowship",
+    competition: "tag-competition",
+    accelerator: "tag-accelerator",
+    internship: "tag-internship",
+    scholarship: "tag-scholarship"
+  };
+  return map[type] || "tag-grant";
+}
+
+function tagLabel(type) {
+  return type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+function deadlineClass(status) {
+  if (status === "urgent") return "urgent";
+  if (status === "open") return "open";
+  return "";
+}
+
+function buildCard(opp) {
+  return `
+    <a class="opp-card${opp.featured ? " featured" : ""}" href="${opp.url}" target="_blank" rel="noopener" data-type="${opp.type}" data-title="${opp.title.toLowerCase()}" data-org="${opp.org.toLowerCase()}" data-loc="${opp.location.toLowerCase()}">
+      <div class="opp-left">
+        <div class="opp-tags">
+          ${opp.featured ? '<span class="opp-tag tag-featured">Featured</span>' : ""}
+          <span class="opp-tag ${tagClass(opp.type)}">${tagLabel(opp.type)}</span>
+          <span class="opp-tag" style="color:var(--muted);border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);">${opp.location.split("(")[0].trim()}</span>
+        </div>
+        <div class="opp-title">${opp.title}</div>
+        <div class="opp-org">${opp.org}</div>
+        <div class="opp-desc">${opp.desc}</div>
+        <div class="opp-footer">
+          <span class="opp-meta">💰 ${opp.value}</span>
+        </div>
+      </div>
+      <div class="opp-right">
+        <div class="opp-deadline">
+          <span class="opp-deadline-label">Deadline</span>
+          <span class="opp-deadline-date ${deadlineClass(opp.deadlineStatus)}">${opp.deadline}</span>
+        </div>
+        <div class="opp-arrow">→</div>
+      </div>
+    </a>`;
+}
+
+function renderCards(list) {
+  const grid = document.getElementById("oppsGrid");
+  const noRes = document.getElementById("noResults");
+  const countEl = document.getElementById("visible-count");
+
+  if (list.length === 0) {
+    grid.innerHTML = "";
+    noRes.style.display = "block";
+    countEl.textContent = "0";
+    return;
+  }
+
+  noRes.style.display = "none";
+  grid.innerHTML = list.map(buildCard).join("");
+  countEl.textContent = String(list.length);
+}
+
+function updateCounts(list) {
+  const types = ["grant", "fellowship", "competition", "accelerator", "internship", "scholarship"];
+  types.forEach((type) => {
+    const count = list.filter((opp) => opp.type === type).length;
+    const filterBadge = document.getElementById("count-" + type);
+    const sideBadge = document.getElementById("s-" + type);
+    if (filterBadge) filterBadge.textContent = count || "";
+    if (sideBadge) sideBadge.textContent = count;
+  });
+  const allBtn = document.getElementById("count-all");
+  if (allBtn) allBtn.textContent = list.length;
+}
+
+let activeFilter = "all";
+let searchQuery = "";
+const navbar = document.getElementById("navbar");
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+function closeMenu() {
+  navbar.classList.remove("menu-open");
+  document.body.classList.remove("menu-open");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Open menu");
+}
+
+function openMenu() {
+  navbar.classList.add("menu-open");
+  document.body.classList.add("menu-open");
+  navToggle.setAttribute("aria-expanded", "true");
+  navToggle.setAttribute("aria-label", "Close menu");
+}
+
+function getFiltered() {
+  return opportunities.filter((opp) => {
+    const matchType = activeFilter === "all" || opp.type === activeFilter;
+    const query = searchQuery.toLowerCase();
+    const matchSearch =
+      !query ||
+      opp.title.toLowerCase().includes(query) ||
+      opp.org.toLowerCase().includes(query) ||
+      opp.location.toLowerCase().includes(query) ||
+      opp.type.includes(query);
+    return matchType && matchSearch;
+  });
+}
+
+function refresh() {
+  const filtered = getFiltered();
+  renderCards(filtered);
+  updateCounts(opportunities);
+}
+
+document.querySelectorAll(".filter-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach((button) => button.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    refresh();
+  });
+});
+
+document.querySelectorAll(".cat-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const filter = item.dataset.filter;
+    activeFilter = filter;
+    document.querySelectorAll(".filter-btn").forEach((button) => {
+      button.classList.toggle("active", button.dataset.filter === filter);
+    });
+    refresh();
+    document.querySelector(".filter-bar").scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+navToggle.addEventListener("click", () => {
+  if (navbar.classList.contains("menu-open")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+document.getElementById("searchInput").addEventListener("input", (event) => {
+  searchQuery = event.target.value;
+  refresh();
+});
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760) {
+    closeMenu();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (window.innerWidth <= 760 && navbar.classList.contains("menu-open") && !navbar.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+refresh();
+</script>
+</body>
+</html>
