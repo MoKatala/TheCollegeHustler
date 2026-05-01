@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<link rel="preload" href="logo.svg" as="image" type="image/svg+xml" fetchpriority="high"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Opportunities — The College Hustler</title>
 <meta name="description" content="Grants, fellowships, venture funding and scholarships curated for African college founders."/>
@@ -17,6 +18,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1K2J618EQT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1K2J618EQT');
+</script>
+
 <style>
 :root{
   --black:#0f0f0f;--off:#161514;--surface:#1d1c1a;
@@ -62,10 +73,9 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 .home::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:500px;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(245,197,24,0.08) 0%,transparent 70%),radial-gradient(ellipse 30% 30% at 30% 60%,rgba(192,132,252,0.04) 0%,transparent 60%),radial-gradient(ellipse 30% 30% at 70% 40%,rgba(129,140,248,0.04) 0%,transparent 60%);pointer-events:none;z-index:0}
 .home-logo-lockup{display:flex;flex-direction:column;align-items:center;margin-bottom:28px;position:relative;z-index:1;animation:fadeUp 0.45s var(--ease) both}
 .home-logo-divider{width:1px;height:28px;background:linear-gradient(to bottom,rgba(245,197,24,0.25),transparent);margin:0 auto}
-.home-headline{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(32px,5.5vw,80px);line-height:1.08;letter-spacing:-0.03em;color:var(--white);white-space:nowrap;margin:0 auto 20px;min-height:1.2em;position:relative;z-index:1;animation:fadeUp 0.55s 0.08s var(--ease) both}
+.home-headline{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(32px,5.5vw,80px);line-height:1.08;letter-spacing:-0.03em;color:var(--white);white-space:nowrap;margin:0 auto 44px;min-height:1.2em;position:relative;z-index:1;animation:fadeUp 0.55s 0.08s var(--ease) both}
 .tw-caret{display:inline-block;width:3px;height:0.82em;background:var(--gold);border-radius:1px;margin-left:4px;vertical-align:-0.06em;animation:tw-blink 1s steps(1) infinite}
 @keyframes tw-blink{0%,100%{opacity:1}50%{opacity:0}}
-.home-sub{font-size:clamp(0.9rem,1.4vw,1.1rem);color:var(--muted);font-weight:300;line-height:1.7;max-width:480px;margin:0 auto 48px;position:relative;z-index:1;animation:fadeUp 0.55s 0.16s var(--ease) both}
 .home-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;position:relative;z-index:1;animation:fadeUp 0.55s 0.24s var(--ease) both}
 .home-chip{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;border:1px solid var(--border-s);background:rgba(255,255,255,0.03);font-size:0.9rem;font-weight:500;color:var(--text);cursor:pointer;transition:border-color 0.25s,color 0.25s,background 0.25s,transform 0.25s;backdrop-filter:blur(8px)}
 .home-chip:hover{border-color:rgba(245,197,24,0.5);color:var(--white);background:rgba(245,197,24,0.06);transform:translateY(-4px)}
@@ -77,18 +87,13 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 .modal-overlay.open{opacity:1;pointer-events:auto}
 .modal{position:relative;width:min(1040px,100%);max-height:calc(100vh - 108px);z-index:850;background:var(--black);border:1px solid var(--border-s);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transform:scale(0.95) translateY(20px);opacity:0;transition:transform 0.4s var(--ease),opacity 0.32s var(--ease);box-shadow:0 40px 100px rgba(0,0,0,0.65),0 0 0 1px rgba(255,255,255,0.05),inset 0 1px 0 rgba(255,255,255,0.06)}
 .modal-overlay.open .modal{transform:scale(1) translateY(0);opacity:1}
-
-/* Modal header */
 .modal-header{flex-shrink:0;background:rgba(15,15,14,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);border-radius:20px 20px 0 0;padding:0 16px 0 20px;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .modal-header-left{display:flex;align-items:center;gap:9px;min-width:0;flex:1;overflow:hidden}
 .modal-type-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .modal-title{font-family:"Syne",sans-serif;font-weight:700;font-size:0.92rem;color:var(--white);letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* count pill — hidden on mobile via media query */
 .modal-count{font-size:0.68rem;color:var(--muted);background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:100px;padding:2px 9px;white-space:nowrap;flex-shrink:0}
-/* close — icon-only circle button */
 .modal-close{display:flex;align-items:center;justify-content:center;width:34px;height:34px;background:rgba(255,255,255,0.06);border:1px solid var(--border-s);border-radius:50%;font-size:1.15rem;line-height:1;color:var(--muted);cursor:pointer;flex-shrink:0;transition:background 0.2s,color 0.2s,border-color 0.2s}
 .modal-close:hover{background:rgba(255,255,255,0.12);color:var(--white);border-color:rgba(255,255,255,0.2)}
-
 .modal-scroll{flex:1;overflow-y:auto;overscroll-behavior:contain}
 .modal-body{display:grid;grid-template-columns:1fr 280px;align-items:start}
 .modal-list{padding:24px 22px 60px;border-right:1px solid var(--border)}
@@ -106,7 +111,6 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 .saved-panel-btn:hover{background:rgba(255,255,255,0.06)}
 .saved-panel-btn.primary{background:var(--gold);border-color:transparent;color:var(--black)}
 .saved-panel-btn.primary:hover{opacity:0.9}
-
 .opps-grid{display:flex;flex-direction:column;gap:0}
 .no-results{text-align:center;padding:60px 20px;display:none}
 .no-results.show{display:block}
@@ -229,50 +233,34 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
-/* ══════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════ */
+/* ── RESPONSIVE ── */
 @media(max-width:760px){
-  /* Nav */
   .nav{padding:0 16px;min-height:56px}
   .nav-toggle{display:inline-flex}
   .nav-links{position:absolute;top:calc(100% + 6px);left:16px;right:16px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(17,17,16,0.98);backdrop-filter:blur(16px);box-shadow:0 20px 48px rgba(0,0,0,0.4);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.22s var(--ease),transform 0.22s var(--ease)}
   .nav.menu-open .nav-links{opacity:1;pointer-events:auto;transform:translateY(0)}
   .nav-links li,.nav-links a{width:100%}
   .nav-links a{display:flex;justify-content:flex-start;padding:11px 13px;text-align:left;border-radius:10px}
-
-  /* Home */
   .home{padding:80px 20px 60px}
   .home-headline{white-space:normal;font-size:clamp(28px,8vw,52px)}
-  .home-sub{font-size:0.87rem;max-width:320px;margin-bottom:36px}
   .home-chip{padding:13px 22px;font-size:0.86rem}
   .home-chips{gap:10px}
-
-  /* Modal — bottom sheet, clears the 56px nav */
   .modal-overlay{padding:0;align-items:flex-end}
   .modal{width:100vw;height:calc(100dvh - 56px);max-height:none;border-radius:18px 18px 0 0;border:none;margin-top:auto}
   .modal-header{border-radius:18px 18px 0 0;padding:0 14px 0 16px;min-height:52px}
-  /* hide count pill on mobile — fixes the crowding bug */
   .modal-count{display:none}
-
-  /* Layout */
   .modal-body{grid-template-columns:1fr}
   .modal-list{border-right:none;padding:18px 16px 40px}
   .modal-sidebar{border-top:1px solid var(--border);padding:18px 16px 40px}
   .modal-extra{padding:0 16px 48px}
-
-  /* Cards — stack on mobile */
   .opp-card{grid-template-columns:1fr;padding:16px}
   .opp-right{flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
   .opp-deadline{text-align:left}
-  .opp-arrow{display:none} /* save space on mobile */
-
-  /* Bottom sections */
+  .opp-arrow{display:none}
   .consult-grid{grid-template-columns:1fr}
   .consult-section-m{padding:22px 18px}
   .submit-section-m{padding:22px 18px}
 }
-
 @media(max-width:480px){
   .home-headline{font-size:clamp(26px,7vw,40px)}
   .opp-title{font-size:0.9rem}
@@ -316,20 +304,19 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
     <li><a href="javascript:void(0)" onclick="openModal('scholarship')" class="section-link">Scholarships</a></li>
     <li><a href="javascript:void(0)" onclick="openModal('fellowship')" class="section-link">Fellowships</a></li>
     <li><a href="https://forms.gle/iW1wzmi8A8dWj2HYA" target="_blank" rel="noopener noreferrer">Submit Opportunity</a></li>
-    <li><a href="https://thecollegehustler.com/pre-accellerator/" class="main-site" target="_blank" rel="noopener noreferrer">Pre-Accellerator</a></li>
+    <li><a href="https://thecollegehustler.com/pre-accelerator/" class="main-site" target="_blank" rel="noopener noreferrer">Pre-Accelerator</a></li>
   </ul>
 </nav>
 
 <!-- HOME -->
 <main class="home" id="homeScreen">
   <div class="home-logo-lockup">
-    <img src="logo.svg" alt="The College Hustler" id="hero-logo-img" style="height:100px;width:auto;display:block;margin:0 auto;"/>
+    <img src="logo.svg" alt="The College Hustler" id="hero-logo-img" fetchpriority="high" decoding="async" style="height:100px;width:auto;display:block;margin:0 auto;"/>
     <div class="home-logo-divider"></div>
   </div>
   <h1 class="home-headline" id="tw-headline" aria-label="What brings you here?">
     <span class="tw-caret" id="tw-caret"></span>
   </h1>
-  <p class="home-sub">Verified funding, fellowships and scholarships — curated for Africa's most ambitious college founders.</p>
   <div class="home-chips">
     <button class="home-chip" onclick="openModal('venture')"><span class="home-chip-dot" style="background:#c084fc"></span>Venture Funding</button>
     <button class="home-chip" onclick="openModal('scholarship')"><span class="home-chip-dot" style="background:#f472b6"></span>Scholarships</button>
@@ -458,7 +445,7 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="logo.svg" alt="The College Hustler" id="footer-logo-img"/>
+        <img src="logo.svg" alt="The College Hustler" id="footer-logo-img" decoding="async"/>
         <p class="footer-brand-desc">Verified funding opportunities for Africa's most ambitious college founders — grants, fellowships, scholarships, and venture programs, all in one place.</p>
         <div class="footer-socials">
           <a class="footer-social-link" href="https://wa.me/250789902748" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
@@ -470,7 +457,7 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
         <ul class="footer-links">
           <li><a href="https://forms.gle/ALGEqrmaCYzQu2KC6" target="_blank" rel="noopener noreferrer">Application Support</a></li>
           <li><a href="https://wa.me/250789902748?text=Hi%20The%20College%20Hustler%2C%20I%20would%20like%20to%20receive%20opportunity%20updates%20on%20WhatsApp." target="_blank" rel="noopener noreferrer">WhatsApp Alerts</a></li>
-          <li><a href="https://thecollegehustler.com/pre-accellerator/" target="_blank" rel="noopener noreferrer">Pre-Accellerator</a></li>
+          <li><a href="https://thecollegehustler.com/pre-accelerator/" target="_blank" rel="noopener noreferrer">Pre-Accelerator</a></li>
         </ul>
       </div>
       <div>
@@ -514,24 +501,24 @@ const SAVED_OPPORTUNITIES_KEY="tch_saved_opportunities";
 const opportunities=[
   {id:1,title:"Africa's Business Heroes",org:"Jack Ma Foundation / Alibaba",type:"venture",desc:"Pan-African competition celebrating high-impact entrepreneurs. Top 10 finalists share a $1.5M prize pool plus mentorship and global visibility.",deadline:"7 May 2026",deadlineDate:"2026-05-07",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","Business profile","Pitch materials"],location:"Pan-Africa",value:"$1.5M prize pool",url:"https://www.africabusinessheroes.org/en/",featured:true},
   {id:17,title:"Visa Africa FinTech Accelerator — Cohort 6",org:"Visa",type:"venture",desc:"Visa's flagship African fintech accelerator connects early-stage startups with mentorship, Visa's developer tools, investor Demo Day access, and over $200,000 in product perks. Now in its 6th cohort, having supported 104 startups across the continent.",deadline:"17 May 2026",deadlineDate:"2026-05-17",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","MVP evidence","Traction data"],location:"Pan-Africa",value:"$200,000+ in perks + investor access",url:"https://africa.visa.com/en_MW/visa-everywhere/innovation/visa-accelerator.html",featured:true},
-  {id:21,title:"Thiel Fellowship",org:"Thiel Foundation",type:"venture",desc:"$250,000 over two years for bold young builders aged 22 or under who want to build a startup, conduct research, or launch a project instead of sitting in a classroom. Fellows get the grant, mentorship, and access to a powerful global network of founders, investors, and scientists — with no equity taken.",deadline:"Rolling",deadlineDate:null,applyTime:"multiple days",difficulty:"Competitive",requirements:["Online application","Project evidence","Contrarian essay","Portfolio links"],location:"Global (Africa eligible)",value:"$250,000 over 2 years",url:"https://thielfellowship.org/apply",featured:true},
+  {id:21,title:"Thiel Fellowship",org:"Thiel Foundation",type:"venture",desc:"$250,000 over two years for bold young builders aged 22 or under who want to build a startup, conduct research, or launch a project instead of sitting in a classroom. Fellows get the grant, mentorship, and access to a powerful global network of founders, investors, and scientists — with no equity taken.",deadline:"Rolling",deadlineDate:null,applyTime:"Multiple days",difficulty:"Competitive",requirements:["Online application","Project evidence","Contrarian essay","Portfolio links"],location:"Global (Africa eligible)",value:"$250,000 over 2 years",url:"https://thielfellowship.org/apply",featured:true},
   {id:2,title:"Anzisha Prize",org:"African Leadership Group",type:"venture",desc:"Africa's premier award for young entrepreneurs aged 15–22 who have already started a business. Cash prizes, mentorship, and entry into a continent-wide founder network.",deadline:"31 March 2026",deadlineDate:"2026-03-31",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","Business evidence","Founder video"],location:"Pan-Africa",value:"Up to $100,000",url:"https://anzishaprize.org",featured:false},
-  {id:3,title:"MIT Solver Global Challenge",org:"MIT Enterprise Forum",type:"venture",desc:"MIT's open innovation programme funds tech solutions to global challenges. African applicants compete in dedicated tracks and win grants, mentorship, and access to MIT's global network.",deadline:"31 May 2026",deadlineDate:"2026-05-31",applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Solution brief","Team profile"],location:"Global (Africa eligible)",value:"Up to $150,000",url:"https://solve.mit.edu",featured:false},
+  {id:3,title:"MIT Solver Global Challenge",org:"MIT Enterprise Forum",type:"venture",desc:"MIT's open innovation programme funds tech solutions to global challenges. African applicants compete in dedicated tracks and win grants, mentorship, and access to MIT's global network.",deadline:"31 May 2026",deadlineDate:"2026-05-31",applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Solution brief","Team profile"],location:"Global (Africa eligible)",value:"Up to $150,000",url:"https://solve.mit.edu",featured:false},
   {id:4,title:"Young Champions of the Earth",org:"UNEP",type:"venture",desc:"UNEP's flagship youth environmental initiative for founders aged 18–30 building planet-focused solutions. Winners receive seed funding, mentorship, and global recognition.",deadline:"15 April 2026",deadlineDate:"2026-04-15",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","Solution summary","Founder profile"],location:"Global (Africa eligible)",value:"Recognition + seed support",url:"https://www.unep.org/youngchampions/",featured:false},
   {id:5,title:"Tony Elumelu Foundation Entrepreneurship Programme",org:"Tony Elumelu Foundation",type:"venture",desc:"12-week business training, mentorship, and seed capital for African entrepreneurs. No equity taken. One of the continent's largest non-dilutive entrepreneur programmes.",deadline:"31 January 2026",deadlineDate:"2026-01-31",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","Business concept","Founder profile"],location:"Pan-Africa",value:"$5,000",url:"https://tefconnect.com",featured:false},
   {id:6,title:"Google for Startups Black Founders Fund Africa",org:"Google for Startups",type:"venture",desc:"Equity-free cash awards for Black-led African startups. Includes Google Cloud credits, expert mentorship, and warm introductions to investors.",deadline:"Rolling",deadlineDate:null,applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","Startup profile","Traction evidence"],location:"Pan-Africa",value:"Up to $100,000",url:"https://startup.google.com/programs/black-founders-fund/africa/",featured:false},
   {id:8,title:"Hult Prize Global Challenge",org:"Hult International Business School",type:"venture",desc:"The world's largest student startup competition. College teams compete to solve global challenges, with the top team taking $1M. Campus rounds at hundreds of universities globally.",deadline:"28 February 2026",deadlineDate:"2026-02-28",applyTime:"1 day",difficulty:"Competitive",requirements:["Team registration","Pitch deck","Campus round"],location:"Global (Africa eligible)",value:"$1,000,000",url:"https://hultprize.org",featured:false},
   {id:18,title:"RAISEAfrica — Renewables Accelerator Programme",org:"RES4Africa Foundation",type:"venture",desc:"Structured acceleration programme for young African innovators building renewable energy solutions. Up to 6 startups selected for mentoring, funding support, and investor access.",deadline:"17 May 2026",deadlineDate:"2026-05-17",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","Energy solution brief","Proof of African citizenship"],location:"Pan-Africa",value:"Funding support + mentorship",url:"https://www.res4africa.org/raiseafrica/",featured:false},
-  {id:9,title:"Mastercard Foundation Scholars at African Leadership University",org:"Mastercard Foundation / ALU",type:"scholarship",desc:"Full scholarship for academically talented African students at ALU, combining rigorous education with leadership development and career support.",deadline:"Admissions open",deadlineDate:null,applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Rwanda / Mauritius",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/african-leadership-university-alu/",featured:true},
-  {id:10,title:"Mastercard Foundation Scholars at CMU-Africa",org:"Mastercard Foundation / Carnegie Mellon University Africa",type:"scholarship",desc:"Full scholarship for African students pursuing graduate study in technology and innovation at CMU-Africa in Kigali.",deadline:"Admissions open",deadlineDate:null,applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Rwanda",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/carnegie-mellon-university-africa-cmu-africa/",featured:false},
-  {id:11,title:"Mastercard Foundation Scholars at Pan-Atlantic University",org:"Mastercard Foundation / Pan-Atlantic University",type:"scholarship",desc:"Full scholarship for African students at Pan-Atlantic University in Lagos, focused on ethics, leadership, and impact-driven education.",deadline:"Admissions open",deadlineDate:null,applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Nigeria",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/pan-atlantic-university/",featured:false},
-  {id:12,title:"Mastercard Foundation Scholars at Sciences Po",org:"Mastercard Foundation / Sciences Po",type:"scholarship",desc:"Scholarship for African students at Sciences Po in Paris, with access to world-class policy, international affairs, and social science education.",deadline:"Admissions open",deadlineDate:null,applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"France",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/sciences-po/",featured:false},
-  {id:19,title:"DAAD In-Country/In-Region Masters Scholarship 2026/2027",org:"German Academic Exchange Service (DAAD)",type:"scholarship",desc:"Fully funded Master's degrees for Sub-Saharan African students studying within Africa. Covers tuition, monthly stipend, and health insurance. Women and candidates from underprivileged regions strongly encouraged.",deadline:"29 April 2026",deadlineDate:"2026-04-29",applyTime:"multiple days",difficulty:"Competitive",requirements:["Bachelor's degree","Application form","Study plan","References"],location:"Sub-Saharan Africa",value:"Full tuition + monthly stipend",url:"https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/in-countryin-region-programme-in-developing-countries/",featured:false},
-  {id:20,title:"Mastercard Foundation Scholars at AUB",org:"Mastercard Foundation / American University of Beirut",type:"scholarship",desc:"Full online Master's scholarships for African students through AUB's graduate programmes. Priority for women, refugees, displaced youth, and persons with disabilities.",deadline:"18 May 2026",deadlineDate:"2026-05-18",applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Online (Africa eligible)",value:"Full scholarship",url:"https://www.aub.edu.lb/mastercard/Pages/default.aspx",featured:false},
-  {id:13,title:"Mandela Washington Fellowship",org:"U.S. Department of State",type:"fellowship",desc:"Six-week leadership institute at a top U.S. university for outstanding young African leaders aged 25–35. Fully funded, covering business, civic engagement, or public management tracks.",deadline:"15 November 2025",deadlineDate:"2025-11-15",applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","CV","Two references","Personal statement"],location:"Pan-Africa",value:"Fully funded",url:"https://yali.state.gov/mwf/",featured:true},
+  {id:9,title:"Mastercard Foundation Scholars at African Leadership University",org:"Mastercard Foundation / ALU",type:"scholarship",desc:"Full scholarship for academically talented African students at ALU, combining rigorous education with leadership development and career support.",deadline:"Admissions open",deadlineDate:null,applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Rwanda / Mauritius",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/african-leadership-university-alu/",featured:true},
+  {id:10,title:"Mastercard Foundation Scholars at CMU-Africa",org:"Mastercard Foundation / Carnegie Mellon University Africa",type:"scholarship",desc:"Full scholarship for African students pursuing graduate study in technology and innovation at CMU-Africa in Kigali.",deadline:"Admissions open",deadlineDate:null,applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Rwanda",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/carnegie-mellon-university-africa-cmu-africa/",featured:false},
+  {id:11,title:"Mastercard Foundation Scholars at Pan-Atlantic University",org:"Mastercard Foundation / Pan-Atlantic University",type:"scholarship",desc:"Full scholarship for African students at Pan-Atlantic University in Lagos, focused on ethics, leadership, and impact-driven education.",deadline:"Admissions open",deadlineDate:null,applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Nigeria",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/pan-atlantic-university/",featured:false},
+  {id:12,title:"Mastercard Foundation Scholars at Sciences Po",org:"Mastercard Foundation / Sciences Po",type:"scholarship",desc:"Scholarship for African students at Sciences Po in Paris, with access to world-class policy, international affairs, and social science education.",deadline:"Admissions open",deadlineDate:null,applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"France",value:"Full scholarship",url:"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/sciences-po/",featured:false},
+  {id:19,title:"DAAD In-Country/In-Region Masters Scholarship 2026/2027",org:"German Academic Exchange Service (DAAD)",type:"scholarship",desc:"Fully funded Master's degrees for Sub-Saharan African students studying within Africa. Covers tuition, monthly stipend, and health insurance. Women and candidates from underprivileged regions strongly encouraged.",deadline:"29 April 2026",deadlineDate:"2026-04-29",applyTime:"Multiple days",difficulty:"Competitive",requirements:["Bachelor's degree","Application form","Study plan","References"],location:"Sub-Saharan Africa",value:"Full tuition + monthly stipend",url:"https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/in-countryin-region-programme-in-developing-countries/",featured:false},
+  {id:20,title:"Mastercard Foundation Scholars at AUB",org:"Mastercard Foundation / American University of Beirut",type:"scholarship",desc:"Full online Master's scholarships for African students through AUB's graduate programmes. Priority for women, refugees, displaced youth, and persons with disabilities.",deadline:"18 May 2026",deadlineDate:"2026-05-18",applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Transcript","Supporting documents"],location:"Online (Africa eligible)",value:"Full scholarship",url:"https://www.aub.edu.lb/mastercard/Pages/default.aspx",featured:false},
+  {id:13,title:"Mandela Washington Fellowship",org:"U.S. Department of State",type:"fellowship",desc:"Six-week leadership institute at a top U.S. university for outstanding young African leaders aged 25–35. Fully funded, covering business, civic engagement, or public management tracks.",deadline:"15 November 2025",deadlineDate:"2025-11-15",applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","CV","Two references","Personal statement"],location:"Pan-Africa",value:"Fully funded",url:"https://yali.state.gov/mwf/",featured:true},
   {id:14,title:"African Union Youth Volunteer Corps",org:"African Union Commission",type:"fellowship",desc:"Continental youth service programme for young Africans to contribute their skills across AU organs and partner institutions while building pan-African leadership experience.",deadline:"26 April 2026",deadlineDate:"2026-04-26",applyTime:"1 day",difficulty:"Competitive",requirements:["Application form","CV","Motivation letter"],location:"Pan-Africa",value:"Monthly stipend + benefits",url:"https://au.int/es/node/46210",featured:false},
   {id:15,title:"YALI Network Online Course Program",org:"Young African Leaders Initiative (YALI)",type:"fellowship",desc:"Free online leadership courses for African youth across business, civil society, and public management. Certificates recognised across the continent and beyond.",deadline:"Rolling",deadlineDate:null,applyTime:"15 mins",difficulty:"Easy",requirements:["Online registration"],location:"Pan-Africa",value:"Free + Certificate",url:"https://yali.state.gov/network/",featured:false},
-  {id:16,title:"Obama Foundation Leaders Africa Program",org:"Obama Foundation",type:"fellowship",desc:"Leadership development programme for emerging African leaders driving positive change in their communities. Combines training, mentorship, and a powerful continental network.",deadline:"Rolling",deadlineDate:null,applyTime:"multiple days",difficulty:"Competitive",requirements:["Application form","Leadership evidence","References"],location:"Pan-Africa",value:"Fully funded program",url:"https://www.obama.org/programs/leaders/africa/",featured:false}
+  {id:16,title:"Obama Foundation Leaders Africa Program",org:"Obama Foundation",type:"fellowship",desc:"Leadership development programme for emerging African leaders driving positive change in their communities. Combines training, mentorship, and a powerful continental network.",deadline:"Rolling",deadlineDate:null,applyTime:"Multiple days",difficulty:"Competitive",requirements:["Application form","Leadership evidence","References"],location:"Pan-Africa",value:"Fully funded program",url:"https://www.obama.org/programs/leaders/africa/",featured:false}
 ];
 
 const TYPE_META={
@@ -604,7 +591,7 @@ function buildCard(opp){
 }
 
 // ── STATE ─────────────────────────────────────────────────────
-let activeType="venture"; // ✅ fixed: was "grant" which broke everything
+let activeType="venture";
 let showSavedOnly=false;
 let savedIds=loadSaved();
 
