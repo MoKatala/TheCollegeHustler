@@ -235,36 +235,93 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 
 /* ── RESPONSIVE ── */
 @media(max-width:760px){
+  /* ── Nav ── */
   .nav{padding:0 16px;min-height:56px}
   .nav-toggle{display:inline-flex}
-  .nav-links{position:absolute;top:calc(100% + 6px);left:16px;right:16px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(17,17,16,0.98);backdrop-filter:blur(16px);box-shadow:0 20px 48px rgba(0,0,0,0.4);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.22s var(--ease),transform 0.22s var(--ease)}
+  .nav-links{position:absolute;top:calc(100% + 6px);left:16px;right:16px;display:flex;flex-direction:column;align-items:stretch;gap:6px;padding:10px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(17,17,16,0.98);backdrop-filter:blur(16px);box-shadow:0 20px 48px rgba(0,0,0,0.4);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.22s var(--ease),transform 0.22s var(--ease)}
   .nav.menu-open .nav-links{opacity:1;pointer-events:auto;transform:translateY(0)}
   .nav-links li,.nav-links a{width:100%}
   .nav-links a{display:flex;justify-content:flex-start;padding:11px 13px;text-align:left;border-radius:10px}
-  .home{padding:80px 20px 60px}
+
+  /* ── Home ── */
+  .home{padding:80px 20px 52px}
   .home-headline{white-space:normal;font-size:clamp(28px,8vw,52px)}
-  .home-chip{padding:13px 22px;font-size:0.86rem}
-  .home-chips{gap:10px}
+  .home-chip{padding:12px 20px;font-size:0.84rem}
+  .home-chips{gap:8px}
+
+  /* ── Modal shell — full-height bottom sheet ── */
   .modal-overlay{padding:0;align-items:flex-end}
   .modal{width:100vw;height:calc(100dvh - 56px);max-height:none;border-radius:18px 18px 0 0;border:none;margin-top:auto}
   .modal-header{border-radius:18px 18px 0 0;padding:0 14px 0 16px;min-height:52px}
   .modal-count{display:none}
   .modal-body{grid-template-columns:1fr}
-  .modal-list{border-right:none;padding:18px 16px 40px}
-  .modal-sidebar{border-top:1px solid var(--border);padding:18px 16px 40px}
-  .modal-extra{padding:0 16px 48px}
-  .opp-card{grid-template-columns:1fr;padding:16px}
-  .opp-right{flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-  .opp-deadline{text-align:left}
+  .modal-list{border-right:none;padding:14px 14px 32px}
+  .modal-list-meta{font-size:0.7rem;margin-bottom:12px}
+  .modal-sidebar{border-top:1px solid var(--border);padding:16px 14px 36px}
+  .modal-extra{padding:0 14px 40px}
+
+  /* ── Saved panel ── */
+  .saved-panel{flex-direction:column;align-items:flex-start;gap:10px;padding:12px 14px;margin-bottom:12px}
+  .saved-panel-actions{width:100%;justify-content:flex-start}
+
+  /* ── Opportunity cards — clean stacked layout ── */
+  .opp-card{
+    grid-template-columns:1fr;
+    padding:14px 14px 12px;
+    gap:0;
+    border-radius:12px;
+    margin-bottom:8px;
+  }
+  /* Disable the slide effect on touch — just use a subtle background shift */
+  .opp-card:hover{transform:none;border-color:rgba(245,197,24,0.25);background:#1a1916}
+
+  .opp-tags{gap:5px;margin-bottom:6px}
+  .opp-tag{font-size:0.6rem;padding:2px 7px}
+
+  .opp-title{font-size:0.92rem;margin-bottom:3px;line-height:1.25}
+  .opp-org{font-size:0.74rem;margin-bottom:5px}
+  .opp-desc{font-size:0.8rem;line-height:1.6;-webkit-line-clamp:2}
+
+  .opp-signals{gap:8px;margin-top:8px}
+  .opp-signal{font-size:0.66rem}
+
+  .opp-requirements{margin-top:7px;gap:6px}
+  .opp-requirement{font-size:0.62rem;padding:2px 7px}
+
+  .opp-footer{margin-top:10px}
+  .opp-meta{font-size:0.68rem}
+
+  /* Right section — deadline bar pinned to bottom of card */
+  .opp-right{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:0;
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px solid var(--border);
+  }
   .opp-arrow{display:none}
+  .opp-save{font-size:0.64rem;padding:3px 9px;min-height:24px}
+
+  .opp-deadline{text-align:right}
+  .opp-deadline-label{font-size:0.56rem}
+  .opp-deadline-date{font-size:0.76rem}
+  .opp-countdown{font-size:0.62rem;margin-top:1px}
+  .opp-calendar-link{font-size:0.62rem;margin-top:3px}
+
+  /* ── Bottom sections ── */
   .consult-grid{grid-template-columns:1fr}
-  .consult-section-m{padding:22px 18px}
-  .submit-section-m{padding:22px 18px}
+  .consult-section-m{padding:20px 16px}
+  .submit-section-m{padding:20px 16px}
 }
+
 @media(max-width:480px){
   .home-headline{font-size:clamp(26px,7vw,40px)}
-  .opp-title{font-size:0.9rem}
-  .opp-desc{-webkit-line-clamp:3}
+  .opp-title{font-size:0.88rem}
+  .opp-desc{-webkit-line-clamp:2}
+  .nav-links a.main-site{background:var(--gold);color:var(--black)}
 }
 
 /* ── FOOTER ── */
@@ -287,6 +344,74 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 .footer-badge-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:pulse 2.5s ease-in-out infinite}
 @media(max-width:760px){.site-footer{padding:48px 20px 32px}.footer-top{grid-template-columns:1fr 1fr;gap:36px}.footer-brand{grid-column:1/-1}.footer-brand-desc{max-width:100%}}
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}}
+
+/* ── CARD STAGGER ANIMATION ── */
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.opp-card{animation:cardIn 0.32s var(--ease) both}
+.opp-card:nth-child(1){animation-delay:0.04s}
+.opp-card:nth-child(2){animation-delay:0.09s}
+.opp-card:nth-child(3){animation-delay:0.14s}
+.opp-card:nth-child(4){animation-delay:0.19s}
+.opp-card:nth-child(5){animation-delay:0.24s}
+.opp-card:nth-child(6){animation-delay:0.28s}
+.opp-card:nth-child(n+7){animation-delay:0.32s}
+
+/* ── DEADLINE BADGE ── */
+.opp-deadline-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 9px;border-radius:999px;
+  font-family:"Syne",sans-serif;font-weight:700;font-size:0.65rem;
+  letter-spacing:0.04em;border:1px solid;white-space:nowrap;
+}
+.opp-deadline-badge.open{color:#4ade80;border-color:rgba(74,222,128,0.25);background:rgba(74,222,128,0.08)}
+.opp-deadline-badge.urgent{color:#fb923c;border-color:rgba(251,146,60,0.3);background:rgba(251,146,60,0.1)}
+.opp-deadline-badge.closed{color:#f87171;border-color:rgba(248,113,113,0.25);background:rgba(248,113,113,0.08)}
+.opp-deadline-badge::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+
+/* ── MODAL CATEGORY ACCENT LINE ── */
+.modal-accent{height:3px;width:100%;flex-shrink:0;transition:background 0.3s var(--ease)}
+
+/* ── MOBILE-ONLY CARD & HOME POLISH ── */
+@media(max-width:760px){
+
+  /* Glassier home chips */
+  .home-chip{
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-color:rgba(255,255,255,0.1);
+    box-shadow:0 2px 16px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .home-chip:hover{
+    box-shadow:0 4px 24px rgba(245,197,24,0.12),inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  /* Cards: hide extra tags on mobile — show only Featured + type */
+  .opp-tag-location{display:none}
+
+  /* Card footer row refinement */
+  .opp-right{
+    background:rgba(255,255,255,0.02);
+    border-radius:0 0 10px 10px;
+    margin:12px -14px -12px;
+    padding:10px 14px;
+  }
+
+  /* Deadline: use badge instead of raw text on mobile */
+  .opp-deadline-label{display:none}
+  .opp-deadline-date{display:none}
+  .opp-countdown{display:none}
+  .opp-deadline-badge{display:inline-flex}
+
+  /* Hide badge on desktop */
+}
+
+/* Hide badge on desktop by default */
+.opp-deadline-badge{display:none}
+
+@media(max-width:760px){
+  .opp-deadline-badge{display:inline-flex}
+}
 </style>
 </head>
 <body>
@@ -328,6 +453,7 @@ button{font-family:"DM Sans",sans-serif;cursor:pointer}
 <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
 
+    <div class="modal-accent" id="modalAccent"></div>
     <div class="modal-header">
       <div class="modal-header-left">
         <span class="modal-type-dot" id="modalTypeDot"></span>
@@ -568,7 +694,7 @@ function buildCard(opp){
     <div class="opp-tags">
       ${opp.featured?'<span class="opp-tag tag-featured">Featured</span>':""}
       <span class="opp-tag ${tagClass(opp.type)}">${tagLabel(opp.type)}</span>
-      <span class="opp-tag" style="color:var(--muted);border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)">${opp.location.split("(")[0].trim()}</span>
+      <span class="opp-tag opp-tag-location" style="color:var(--muted);border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)">${opp.location.split("(")[0].trim()}</span>
     </div>
     <div class="opp-title">${opp.title}</div>
     <div class="opp-org">${opp.org}</div>
@@ -585,6 +711,7 @@ function buildCard(opp){
       <span class="opp-countdown ${di.cc}">${di.cd}</span>
       ${cal?`<span class="opp-calendar-link" role="button" tabindex="0" data-calendar-url="${cal}">+ Calendar</span>`:""}
     </div>
+    <span class="opp-deadline-badge ${di.dc}">${di.cd === "Open" ? opp.deadline : di.cd}</span>
     <div class="opp-arrow">→</div>
   </div>
 </a>`;
@@ -624,6 +751,7 @@ function openModal(type){
   activeType=type;showSavedOnly=false;
   const meta=TYPE_META[type]||{label:type,dot:"#f5c518"};
   document.getElementById("modalTypeDot").style.background=meta.dot;
+  document.getElementById("modalAccent").style.background=`linear-gradient(90deg,${meta.dot}90,${meta.dot}20)`;
   document.getElementById("modal-title-text").textContent=meta.label;
   const live=opportunities.filter(o=>!isExpired(o.deadlineDate)&&o.type===type);
   document.getElementById("modalCount").textContent=live.length+" active";
